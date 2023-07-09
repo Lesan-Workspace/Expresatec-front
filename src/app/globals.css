@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+.login {
+  background-color: #F4F2F2;
+  font-family: 'Space Grotesk', sans-serif, 'Courier New', Courier, monospace; ;
+}
+
+#no {
+  font-weight: 900;
+  color: #410650;
+  font-size: 40px;
+
+}
+
+.hero {
+
+  /* background-color: rgba(35, 4, 53, 0.932); */
+  background-image: linear-gradient(0deg,
+      rgba(225, 143, 228, 0.699),
+      rgba(67, 8, 82, 0.918)),
+    url(https://th.bing.com/th/id/OIG.USvxH7LVZUM5SYuiNmWG?pid=ImgGn);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.underline{
+  text-decoration: none;
+}
+.underline :hover{
+  
+  color: #5513c0d2;
+}
+.who{
+  margin-top: 5%;
+  font-size: 30px ;
+}
+.sections{
+  padding: 9%;
+  
+  
+}
+.sections img{
+  border-radius: 20px;
+}
+
+.sections1{
+  padding: 20%;
+
+}
+.sections1 h2{
+  text-align: justify;
+
+}
+.hero1 {
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 58vh;
+  color: rgb(0, 0, 0);
+
+}
+
+.buttoninfo {
+
+  color: #F4F2F2;
+  font-weight: bold;
+  background-color: #652cc2;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 10px 45px;
+  border: none;
+  transition: all 0.5s ease-out;
+
+}
+
+.buttoninfo:hover {
+  background-color: #490349;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px 0 rgba(197, 141, 219, 0.863);
+}
+
+.welcome {
+  font-family: 'Space Grotesk', sans-serif, 'Courier New', Courier, monospace;
+
+  font-size: 78px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #000;
+  background-image: linear-gradient(-45deg, #5239a3 9%, rgb(12, 55, 71) 50%, rgb(59, 4, 82) 90%);
+  background-size: 200% 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: brillo 2.8s linear infinite alternate;
+
+  /* font-size: 80px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif; */
+}
+
+.welcome2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 35px;
+  color: rgb(241, 228, 247);
+}
+
+
+@keyframes brillo {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}

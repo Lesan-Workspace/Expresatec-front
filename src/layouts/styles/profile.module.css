@@ -1,0 +1,30 @@
+.profile {
+    font-family: 'Space Grotesk', sans-serif, 'Courier New', Courier, monospace;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    
+    
+}
+.img{
+
+    width: 20%;
+}
+.correo{
+    margin-top: 5%;
+}
+.container{
+    padding: 4%;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 88vh;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(250, 235, 215, 0.253);
+}

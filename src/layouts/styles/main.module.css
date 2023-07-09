@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+
+.hero {
+    height: 50vh;
+    /* background-color: rgba(35, 4, 53, 0.932); */
+    background-image: linear-gradient(0deg,
+            rgba(166, 112, 184, 0.562),
+            rgba(224, 217, 226, 0.733)),
+        url(https://i.ibb.co/JrCdyj7/cf288e05-8263-4db4-a828-6aad3e6410d1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    
+    padding: 2%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 680px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.textos{
+    font-family: 'Space Grotesk', sans-serif, 'Courier New', Courier, monospace;
+    font-size: 23px;
+    font-weight: 600;
+
+}
+
+.profile {
+    font-family: 'Space Grotesk', sans-serif, 'Courier New', Courier, monospace;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+    color: rgb(0, 0, 0);
+
+}
+
+
+
+.cardimage {
+    flex-shrink: 0;
+    width: 108px;
+    height: 108px;
+    object-fit: cover;
+}
+
+.cardcontent {
+    padding: 16px;
+}
+
+.cardtitle {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif, 'Courier New', Courier, monospace;
+}
+
+.cardtext {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}

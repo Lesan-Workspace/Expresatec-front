@@ -1,0 +1,27 @@
+.hero {
+ 
+    /* background-color: rgba(35, 4, 53, 0.932); */
+    background-image: linear-gradient(0deg,
+            rgba(137, 173, 187, 0.562),
+            rgba(224, 217, 226, 0.733)),
+        url(https://i.ibb.co/kmG6Df2/539ce7cf-79a5-403f-841e-f66d17017837.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+
+
+
+}
+
+.juegos {
+    
+    display: flex;
+    height: 92.5vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+
+}
