@@ -35,11 +35,20 @@ const CameraCapture = () => {
     const enviarimage =  async () => {
         
         try {
-            const response =  await axios.post('3.15.204.80', { image: imageData });
-            console.log(response);
-        } catch (error) {
+            const formData = new FormData();
+            formData.append('image', imageData); // imagenFile representa el archivo de imagen que deseas enviar
+        
+            const response = await axios.post('http://3.15.204.80', {image:formData}, {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+              },
+            });
+        
+            console.log(response.data);
+          } catch (error) {
             console.log(error);
-        }
+          }
+    
     
 
     }
