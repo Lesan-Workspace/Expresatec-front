@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link"
 import { useState } from "react";
-import { logout } from "@/controllers/serviceUser";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
+import { logout } from "@/controllers/AuthService";
+
 
 const links = [
   {
@@ -22,15 +23,18 @@ const links = [
 ]
 
 export function Navigation() {
-  const { push } = useRouter();
+
+
   const [isOpen, setIsOpen] = useState(false);
+  const { push } = useRouter();
 
   const handleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
   const handleLogOut = () => {
     logout()
-    push('/login')
+
   }
 
   return (
@@ -38,9 +42,10 @@ export function Navigation() {
       <nav className="flex justify-around items-center">
         <div className="flex justify-between w-full md:w-auto">
           <div>
-            <a href="/">
+            <Link href="/">
               <img src="https://i.ibb.co/zP2fkYq/logotipo.png" style={{ width: 45 }} alt="" />
-            </a>
+            </Link>
+
           </div>
         </div>
         <div>

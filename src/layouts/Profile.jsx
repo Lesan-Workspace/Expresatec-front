@@ -1,5 +1,11 @@
 import styles from './styles/profile.module.css'
+import { handleAuthState } from '@/controllers/AuthService';
+import { useState } from 'react';
 export function Profile() {
+    const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
+    handleAuthState(setUser,setLoading);
+    console.log(user)
     return (
         <>
             <div className={styles.profile}>
@@ -19,7 +25,7 @@ export function Profile() {
 
                     <div className={styles.correo}>
                         <span>Correo:</span><br />
-                        <label>Example@gmail.com</label><br />
+                        <label>{(loading) ? 'cargando....' : user.email }</label><br />
                         
                     </div>
 

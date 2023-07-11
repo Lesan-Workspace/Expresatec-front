@@ -23,7 +23,7 @@ export default function UnauthenticatedPage() {
                 />
 
                 <section className="hero1 mt-8">
-                    <h1 className="welcome">ExpresaT</h1>
+                    <h1 className="welcome">ExpresaTec</h1>
                     <h2 className="welcome2">Porque las emociones de los niños <br /> <b id="no">NO</b>  tienen limites</h2>
                     <br />
                     <button className="buttoninfo" onClick={openModal} >Comenzar</button>

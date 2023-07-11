@@ -1,18 +1,20 @@
 import styles from './styles/CardView.module.css'
+import Link from 'next/link'
 export function CardView(props) {
     return (
         <div>
 
             <div className={styles.card}>
-                <a href="/" >
+                <Link href="/juegos/school1" >
                     <div className={styles.cardimage}>
                         <img src={props.imagen} alt="Image" />
                     </div>
                     <div className={styles.cardcontent}>
-                        <h2 className={styles.cardtitle}>Can life make you a bitter developer?</h2>
-                        <p className={styles.cardtext}>Read more</p>
+                        <h2 className={styles.cardtitle}>{props.titulo}</h2>
+                        <p className={styles.cardtext}>Pruebalo</p>
                     </div>
-                </a>
+                </Link>
+               
             </div>
 
 

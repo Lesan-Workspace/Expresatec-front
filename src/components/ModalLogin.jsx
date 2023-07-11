@@ -1,15 +1,17 @@
 "use client"
 
 import styles from './styles/ModalLogin.module.css';
-import { login } from '@/controllers/serviceUser';
-
+import { loginUser } from '@/controllers/AuthService';
+import { useRouter } from 'next/navigation'
+import { auth } from '@/firebase';
 
 export default function ModalLogin({ isOpen, onClose, }) {
-    
+
     if (!isOpen) {
         return null;
     }
-    
+    const { push } = useRouter();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -17,30 +19,19 @@ export default function ModalLogin({ isOpen, onClose, }) {
         const email = formData.get('email')
         const password = formData.get('password')
 
+        if (email === '' || password === '') {
+            alert('Credenciales Invalidas');
+            return;
+        }
+
         try {
+            loginUser(email, password)
 
-            if (email === '' || password === '') {
-                alert('Por favor, rellene todos los campos');
-                return;
-            }
-
-            const response = await login({ email, password });
-            console.log(response.data ,response.data.user.email)
-            if (response.status === 200){
-                
-                const token = response.data.token;
-                alert("Inicio de sesión exitoso")
-                
-                localStorage.setItem('token', token);
-
-                //pushear a la vista principal
-            }else{
-                alert("Inicio de sesión fallido")
-            }
+       
 
         } catch (error) {
-            console.log(`%cError al Iniciar sesión: ${error}`, 'color: yellow')
-            alert('Error al Iniciar sesion');
+            
+
         }
     }
 

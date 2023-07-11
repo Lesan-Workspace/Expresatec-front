@@ -2,6 +2,7 @@
 import { Ayuda } from "@/layouts/Ayuda"
 import { Navigation } from "@/components/Navigation"
 import { WithAuth } from "@/components/withAuth"
+
  function  AyudaPage() {
     return (
 

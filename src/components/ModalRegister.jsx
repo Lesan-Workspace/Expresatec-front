@@ -1,20 +1,15 @@
 import styles from './styles/ModalRegister.module.css'
 import { useState } from 'react'
-import { register } from '@/controllers/serviceUser'
-import { auth } from '@/firebase'
-import { useRouter } from 'next/navigation'
+import { register } from '@/controllers/AuthService'
+
 
 export default function ModalRegister({ isOpen1, onClose1, children }) {
     if (!isOpen1) {
         return null
     }
     const [passwordMatch, setPasswordMatch] = useState(true)
-    const { push } = useRouter();
-    const getprinttoken = () => {
-        const token = localStorage.getItem('token');
-        console.log(token);
-    
-    }
+   
+
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -31,16 +26,11 @@ export default function ModalRegister({ isOpen1, onClose1, children }) {
             setPasswordMatch(true)
 
             try {
-                register(email, password)
-                
-                const token = await auth.currentUser.getIdToken();
-                localStorage.setItem('token', token);
-                push('/');
-
+                 register(email, password)
 
             } catch (error) {
                 console.log(` error : ${error}`)
-                
+
             }
 
         } else {
@@ -65,7 +55,7 @@ export default function ModalRegister({ isOpen1, onClose1, children }) {
                         <center>
                             <h2 className={styles.welcome}>Crea tu cuenta YAAAA!!!!</h2><br />
                         </center>
-                        
+
 
 
                         <div>

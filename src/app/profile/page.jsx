@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation"
 import { Profile } from "@/layouts/Profile"
 import { WithAuth } from "@/components/withAuth"
 function ProfilePage(){
+    
     return(
         <div>
             <header>

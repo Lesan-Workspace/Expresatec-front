@@ -2,8 +2,8 @@
 import { Main } from "@/layouts/Main"
 import { Navigation } from "@/components/Navigation"
 import { WithAuth } from "@/components/withAuth"
- function Home() {
 
+function Home() {
 
   return (
     <div>
@@ -11,6 +11,9 @@ import { WithAuth } from "@/components/withAuth"
         <Navigation />
 
       </header>
+      <div>
+
+      </div>
       <div>
         <Main />
       </div>
