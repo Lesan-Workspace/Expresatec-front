@@ -1,5 +1,7 @@
+import { sendImage } from '@/controllers/AuthService';
 import { useState, useRef } from 'react';
 import { useEffect } from 'react';
+import axios from 'axios';
 
 const CameraCapture = () => {
     const videoRef = useRef(null);
@@ -30,6 +32,17 @@ const CameraCapture = () => {
         setButton(true)
 
     };
+    const enviarimage =  async () => {
+        
+        try {
+            const response =  await axios.post('3.15.204.80', { image: imageData });
+            console.log(response);
+        } catch (error) {
+            console.log(error);
+        }
+    
+
+    }
 
     const retakePhoto = () => {
         setImageData(null);
@@ -84,7 +97,7 @@ const CameraCapture = () => {
                         </div>
 
                         <div class="col-end-3">
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={captureImage}>Enviar</button>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={enviarimage}>Enviar</button>
                         </div>
                         <div  className='col-start-1 col-end-3 '>
                             <img src={imageData} alt="Captured Image" width="340px" height='255px' />

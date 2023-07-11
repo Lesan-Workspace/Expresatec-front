@@ -1,6 +1,7 @@
 "use client"
 import styles from './styles/schoolview.module.css'
-import CameraCapture from '@/components/cameraCapture'
+import CameraCapture from '../components/cameraCapture'
+
 export function SchoolView() {
     return (
         <>

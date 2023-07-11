@@ -1,7 +1,23 @@
 "use client"
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "@/firebase";
-import { useRouter } from "next/navigation";
+import axios from "axios";
+
+const EMOTION_API_BASE_URL = '3.15.204.80';
+
+
+
+
+
+
+const sendImage = async (image) => {
+    try {
+        const response = await axios.post(EMOTION_API_BASE_URL, image);
+        return response
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 
 
@@ -74,4 +90,6 @@ export {
     register,
     loginUser,
     logout,
+    sendImage,
+    
 }
